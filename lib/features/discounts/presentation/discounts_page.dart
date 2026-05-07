@@ -229,6 +229,7 @@ class _DiscountsPageState extends State<DiscountsPage> {
                   ),
       ),
       floatingActionButton: FloatingActionButton(
+        heroTag: null,
         onPressed: _createDiscount,
         backgroundColor: const Color(0xFF7209B7),
         child: const Icon(Icons.add, color: Colors.white),

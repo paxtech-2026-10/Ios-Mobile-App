@@ -2,12 +2,13 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:http/http.dart' as http;
+import 'package:iosmobileapp/core/api_constants.dart';
 
 class AuthService {
   AuthService({http.Client? client}) : _client = client ?? http.Client();
 
   final http.Client _client;
-  static const String _baseUrl = 'https://paxtech.azurewebsites.net/api/v1';
+  static const String _baseUrl = ApiConstants.baseUrl;
 
   Map<String, String> get _headers => {
         HttpHeaders.contentTypeHeader: 'application/json',

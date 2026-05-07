@@ -2,6 +2,7 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:http/http.dart' as http;
+import 'package:iosmobileapp/core/api_constants.dart';
 import 'package:iosmobileapp/core/services/onboarding_service.dart';
 import 'package:iosmobileapp/features/auth/data/auth_service.dart';
 import 'package:iosmobileapp/features/service/domain/service.dart';
@@ -16,8 +17,7 @@ class ServicesService {
   final String? _authToken;
   final OnboardingService _onboardingService;
 
-  static const String _baseUrl =
-      'https://paxtech.azurewebsites.net/api/v1/services';
+  static const String _baseUrl = ApiConstants.servicesEndpoint;
 
   Future<Map<String, String>> get _headers async {
     final token = _authToken ?? await _onboardingService.getJwtToken();

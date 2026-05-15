@@ -2,6 +2,7 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:http/http.dart' as http;
+import 'package:iosmobileapp/core/api_constants.dart';
 import 'package:iosmobileapp/core/services/onboarding_service.dart';
 import 'package:iosmobileapp/features/calendar/domain/reservation.dart';
 
@@ -13,7 +14,7 @@ class CalendarService {
   final http.Client _client;
   final OnboardingService _onboardingService;
 
-  final String baseUrl = 'https://paxtech.azurewebsites.net/api/v1/reservationsDetails';
+  final String baseUrl = ApiConstants.reservationsDetailsEndpoint;
 
   Future<Map<String, String>> get _headers async {
     final token = await _onboardingService.getJwtToken();

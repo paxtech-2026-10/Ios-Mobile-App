@@ -75,6 +75,7 @@ class _TeamView extends StatelessWidget {
         elevation: 0,
       ),
       floatingActionButton: FloatingActionButton(
+        heroTag: null,
         onPressed: () => _openCreateWorker(context),
         backgroundColor: const Color(0xFF7209B7),
         child: const Icon(

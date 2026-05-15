@@ -4,6 +4,7 @@ import 'dart:io';
 import 'package:http/http.dart' as http;
 import 'package:http_parser/http_parser.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:iosmobileapp/core/api_constants.dart';
 import 'package:iosmobileapp/core/services/onboarding_service.dart';
 import 'package:iosmobileapp/features/team/domain/worker.dart';
 
@@ -17,8 +18,7 @@ class TeamService {
   final String? _authToken;
   final OnboardingService _onboardingService;
 
-  static const String _baseUrl =
-      'https://paxtech.azurewebsites.net/api/v1/workers';
+  static const String _baseUrl = ApiConstants.workersEndpoint;
 
   Future<Map<String, String>> get _headers async {
     // Siempre obtener el token más reciente del OnboardingService

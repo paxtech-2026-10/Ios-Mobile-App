@@ -71,6 +71,7 @@ class _ServiceView extends StatelessWidget {
         elevation: 0,
       ),
       floatingActionButton: FloatingActionButton(
+        heroTag: null,
         onPressed: () => _openCreateService(context),
         backgroundColor: const Color(0xFF7209B7),
         child: const Icon(

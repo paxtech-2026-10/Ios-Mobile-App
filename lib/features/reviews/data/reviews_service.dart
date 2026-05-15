@@ -2,6 +2,7 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:http/http.dart' as http;
+import 'package:iosmobileapp/core/api_constants.dart';
 import 'package:iosmobileapp/core/services/onboarding_service.dart';
 import 'package:iosmobileapp/features/reviews/domain/review.dart';
 
@@ -12,8 +13,7 @@ class ReviewsService {
   final http.Client _client;
   final _onboardingService = OnboardingService();
 
-  static const String _baseUrl =
-      'https://paxtech.azurewebsites.net/api/v1/reviews';
+  static const String _baseUrl = ApiConstants.reviewsEndpoint;
 
   Future<Map<String, String>> get _headers async {
     final token = await _onboardingService.getJwtToken();

@@ -62,19 +62,20 @@ class ReviewsService {
   }
 
   Future<Review> createReview({
-    required String clientName,
-    String? clientEmail,
-    required double rating,
-    required String comment,
+    required int clientId,
     required int providerId,
+    required int rating,
+    required String review,
   }) async {
     final headers = await _headers;
+    // El backend espera CreateReviewResource(clientId, providerId, rating, review).
+    // Antes se enviaban clientName/clientEmail/comment, que el backend ignoraba:
+    // la reseña se guardaba sin texto (review=null) y sin cliente (clientId=null).
     final body = jsonEncode({
-      'clientName': clientName,
-      'clientEmail': clientEmail,
-      'rating': rating,
-      'comment': comment,
+      'clientId': clientId,
       'providerId': providerId,
+      'rating': rating,
+      'review': review,
     });
 
     final response = await _client.post(

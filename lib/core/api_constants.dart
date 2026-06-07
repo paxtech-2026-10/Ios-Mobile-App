@@ -1,7 +1,8 @@
 class ApiConstants {
   static const String baseUrl = String.fromEnvironment(
     'API_BASE_URL',
-    defaultValue: 'https://paxtech.azurewebsites.net/api/v1',
+    defaultValue:
+        'https://paxtech-ashgghgnf7fpfxe9.canadacentral-01.azurewebsites.net/api/v1',
   );
 
   static const String providerProfileEndpoint = '$baseUrl/provider-profiles';

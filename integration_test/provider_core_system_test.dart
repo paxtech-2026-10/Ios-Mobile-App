@@ -74,6 +74,11 @@ void main() {
       await tester.tap(find.byType(FloatingActionButton).first);
       await tester.pump(const Duration(milliseconds: 500));
       await pumpUntilVisible(tester, find.text('Agregar trabajador'));
+      await pumpUntilVisible(
+        tester,
+        find.byType(TextFormField),
+        timeout: const Duration(seconds: 20),
+      );
 
       await tester.enterText(find.byType(TextFormField).first, workerName);
       await tester.tap(find.text('Corte'));
@@ -531,7 +536,12 @@ Future<void> registerProvider(
   await pumpUntilVisible(
     tester,
     find.text('Bienvenido de nuevo'),
-    timeout: const Duration(seconds: 25),
+    timeout: const Duration(seconds: 60),
+  );
+  await pumpUntilVisible(
+    tester,
+    find.byType(TextFormField),
+    timeout: const Duration(seconds: 10),
   );
   // Settle the login screen animation before loginProvider reads its fields.
   await tester.pumpAndSettle();

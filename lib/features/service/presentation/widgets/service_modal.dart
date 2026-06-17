@@ -108,7 +108,7 @@ class _ServiceModalState extends State<ServiceModal> {
                                   _InfoChip(
                                     icon: null,
                                     label: 'Precio',
-                                    value: '\$${widget.service.price.toStringAsFixed(2)}',
+                                    value: 'S/ ${widget.service.price.toStringAsFixed(2)}',
                                   ),
                                 ],
                               ),

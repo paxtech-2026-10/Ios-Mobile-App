@@ -124,7 +124,7 @@ class ServiceCard extends StatelessWidget {
   }
 
   String _formatPrice(double price) {
-    return '\$${price.toStringAsFixed(2)}';
+    return 'S/ ${price.toStringAsFixed(2)}';
   }
 }
 

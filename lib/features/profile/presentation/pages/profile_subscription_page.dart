@@ -133,7 +133,7 @@ class ProfileSubscriptionPage extends StatelessWidget {
             const SizedBox(height: 12),
             _PlanCard(
               name: 'Básico',
-              price: '\$29/mes',
+              price: 'S/ 29/mes',
               features: [
                 'Hasta 200 citas/mes',
                 '5 servicios',
@@ -145,7 +145,7 @@ class ProfileSubscriptionPage extends StatelessWidget {
             const SizedBox(height: 12),
             _PlanCard(
               name: 'ProStyle',
-              price: '\$59/mes',
+              price: 'S/ 59/mes',
               features: [
                 'Hasta 500 citas/mes',
                 '15 servicios',
@@ -159,7 +159,7 @@ class ProfileSubscriptionPage extends StatelessWidget {
             const SizedBox(height: 12),
             _PlanCard(
               name: 'Pro+',
-              price: '\$99/mes',
+              price: 'S/ 99/mes',
               features: [
                 'Citas ilimitadas',
                 'Servicios ilimitados',
